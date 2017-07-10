@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+<body>
+
+<!--function magic_multiply(x,y){
+    return x;
+}   -->
+<script>
+// test 1
+function magic_multiply(x, y){
+  results = x*y
+  return results;
+}
+// magic_multiply(5, 2);
+// 10
+
+// test 2
+function magic_multiply(x, y){
+  results = x*y
+  return results;
+}
+
+// test 3 - doesn't work
+function magic_multiply(x, y){
+if (Number.isInteger(x)){
+      if (Number.isInteger(y)){
+  results = x * y;
+  console.log(results);
+      }
+else if ((x.constructor) === true) { 
+  let results = [];
+for(let i=0; i<x.length; i++){
+  let product = x[i] * y;
+  results.push(product);
+  }
+console.log(results);
+  }
+}
+
+magic_multiply([1,2,3], 2);
+
+</script>   
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Deck of Cards JavaScript</title>
+    
+</head>
+<body>
+	
+</body>
+<script>
+
+class Deck {
+    constructor(){
+        this.cards = this.defaultDeck();
+        this.sizeMax = 52;
+        this.sizeMin = 1;
+        // console.log('You created a deck of cards!')
+    }
+
+    defaultDeck(){
+        let suits = [ "Diamonds","Spades", "Hearts", "Clubs"];
+        let values = ["Ace","2","3","4","5","6","7","8","9","10","Jack","Queen","King"];
+        let starterdeck = [];
+        for(let s = 0; s < suits.length; s++){
+				let suits = suits[s];
+				  for (let value = 0; value < values.length; value++)
+				  {
+					    starterdeck.push(values[value] + 'of' + suits);
+				  }
+        }
+      return (starterdeck);
+    }
+
+    shuffleDeck(){
+      var array = this.cards;
+      var m = this.cards.length, t, i;
+  // While there remain elements to shuffle…
+    while (m) {
+    // Pick a remaining element…
+    i = Math.floor(Math.random() * m--);
+    // And swap it with the current element.
+    t = array[m];
+    array[m] = array[i];
+    array[i] = t;
+  }
+  return array;
+    }
+  
+    resetDeck(){
+        this.cards = this.defaultDeck();
+        return this;
+    }
+
+    dealCard(){
+        this.cards =shuffleDeck();
+        let dealt = this.cards.pop();
+        return dealt;
+    }
+}
+
+
+class Player {
+    constructor(name){
+        this.name = name;
+        this.hand = [];
+    }
+
+    takeCard(card){
+    let newCard = card.dealCard();
+    this.hand.push(newCard);
+    return this.hand;
+    }
+}
+
+
+</script>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+<body>
+
+<script>
+// evaluate array for negative values
+// math 1
+function zero_negativity(Array){
+  let status = true;
+  for(let i=0; i<Array.length; i++){
+    if (Array[i] < 0){
+      status = false;
+  }
+}
+console.log(status);
+}
+
+zero_negativity([1,2,2,4]);
+</script>
+
+<script>
+// math 2
+function is_even(x){
+  let status = false;
+  if (x % 2 === 0) {
+    status = true;
+  }
+  console.log(status)
+}
+</script> 
+
+<script>
+    // math 3
+function how_many_even(Array){
+  let even_count = 0;
+  for (let i=0; i<Array.length; i++){
+    if (Array[i] % 2 === 0){
+      even_count+= 1;
+    }
+  }
+  console.log(even_count);
+}
+</script> 
+
+<script>
+// math 4 not functional - get assistance
+
+function create_dummy_array(array, n){
+  while (n>0){
+    let gen = Math.random() * (9 - 1) + 1;
+    n-=1;
+  arr.push(gen);
+  }
+console.log(array);
+}
+</script>
+<script>
+// random_choice
+function random_choice(arr){
+  let size = arr.length;
+  
+  let gen =Math.floor((Math.random() * size));
+  
+  return arr[gen];
+}
+
+// random_choice([1,2,3,4]);
+</script> 
+
+</body>
+</html>

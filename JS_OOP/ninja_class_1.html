@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+
+<body>
+    <script>
+          
+    function Ninja(name){
+            this.name = name;
+            this.health = 100;
+            var speed = 3;
+            var strength = 3;
+            this.getStrength= function(){
+                return strength;
+            }
+            this.getSpeed = function(){
+                return speed;
+            }
+    Ninja.prototype.sayName = function(){
+                console.log(this.name);
+                return this;
+            }
+    Ninja.prototype.showStats = function(){
+                console.log(this.health, speed, strength);
+                return this;
+            }
+    Ninja.prototype.drinkSake = function(){
+                this.health += 10;
+                console.log(this.health);
+                return this;
+            }
+    Ninja.prototype.punch = function(ninjax){
+        if ((ninjax instanceof Ninja) === true){
+          let status = true;
+          var lost_health = 5;
+          ninjax.health -= lost_health;
+          console.log(`${ninjax.name} was punched by ${this.name} and lost ${lost_health}
+          Health`);
+        }
+        else
+        {
+          status = false;
+          console.log('not an instance of the class');
+        }
+        return this;
+        }
+        
+    }
+    Ninja.prototype.kick = function(ninjax){
+      // strength is a private variable hence, this.strength will not work!
+      if ((ninjax instanceof Ninja) === true){
+          let status = true;
+          var lost_health = 5 * strength;
+          ninjax.health -= lost_health;
+          console.log(`${ninjax.name} was kicked by ${this.name} and lost ${lost_health}
+          Health`);
+      }
+       else
+        {
+          status = false;
+          console.log('not an instance');
+        }
+          return this;
+        }
+var blue_ninja = new Nija("Goemon");
+var red_ninja = new Ninja("Bill Gates");
+
+red_ninja.kick(blue_ninja);
+    
+    
+    </script>
+</body>
+</html>
+

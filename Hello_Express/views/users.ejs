@@ -1,0 +1,22 @@
+<html>
+<body>
+    <h2>Here are all the users:</h2>
+    <% for (var x in users) { %>
+        <h3>Name: <%= users[x].name %></h3>
+        <h4>Email: <%= users[x].email %></h4>
+        <hr>
+    <% } %>
+
+    <h3>Add your info:</h3>
+    <form action='/users' method='post'>
+    Name: <input type='text' name='name'>
+    Email: <input type='text' name='email'>
+    <input type='submit' value='create user'>
+
+</form>
+
+<form action='/users/1' method='get'>
+<input type='submit' name='submit' value='Test'>
+</form>
+</body>
+</html>

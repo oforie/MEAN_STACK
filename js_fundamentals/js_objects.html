@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    
+</head>
+<body>
+	<div id="target"></div
+</body>
+<script type="text/javascript">
+	// challenge 1
+    let students = [
+    {name: 'Remy', cohort: 'Jan'},
+    {name: 'Genevieve', cohort: 'March'},
+    {name: 'Chuck', cohort: 'Jan'},
+    {name: 'Osmund', cohort: 'June'},
+    {name: 'Nikki', cohort: 'June'},
+    {name: 'Boris', cohort: 'June'}
+];
+
+for(let i=0; i<students.length; i++){
+  let message = (`Name: ${students[i]['name']}, Cohort: ${students[i]['cohort']}`);
+  console.log(message);
+}
+// challenge 2
+let users = {
+    employees: [
+        {'first_name':  'Miguel', 'last_name' : 'Jones'},
+        {'first_name' : 'Ernie', 'last_name' : 'Bertson'},
+        {'first_name' : 'Nora', 'last_name' : 'Lu'},
+        {'first_name' : 'Sally', 'last_name' : 'Barkyoumb'}
+    ],
+    managers: [
+       {'first_name' : 'Lillian', 'last_name' : 'Chambers'},
+       {'first_name' : 'Gordon', 'last_name' : 'Poe'}
+    ]
+ };
+ 
+ for (let key in users){
+    console.log(key.toUpperCase());
+    const list_of_employees = users[key];
+    // console.log(list_of_employees)
+    for (let i=0; i<list_of_employees.length; i++){
+      // console.log(list_of_employees[i]);
+      const sol = list_of_employees;
+      let new_string = (`${i+1}- ${sol[i]['first_name']}, ${sol[i]['last_name']}`) 
+      console.log(new_string);
+    }
+ }
+
+</script>
+</html>
