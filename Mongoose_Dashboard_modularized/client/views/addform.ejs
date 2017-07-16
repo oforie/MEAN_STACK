@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html class="no-js"> 
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Add a mongoose</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h2> Help us build our collection!</h2>
+        
+        <% if(typeof(errors) != 'undefined' ) { %>
+            <% for (var x in errors) { %>
+                <h3><%= errors[x].message %></h3>
+            <% } %>
+        <% } %>
+
+        <form class='animals' action='/mongooses' method='post'>
+            <label>
+            Name:<input type='text' name='name'>
+            </label>
+            <label>
+            Color:<input type='text' name='color'>
+            </label>
+            <label>
+            Description:<textarea rows="4" cols="40" name='description'></textarea>
+            </label><br>
+            <input type='submit' value='Add mongoose!'>
+        </form>
+     
+        
+        
+    </body>
+</html>

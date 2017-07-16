@@ -1,0 +1,32 @@
+<% for (let x=0; x < animals.length; x++) { %>
+           <h3> Name: <%= animals[x].name %></a></h3><br>
+           <h3> Color: <%= animals[x].color %></h3><br>
+            <h3>Description: <%= animals[x].description %></h3><br>
+            <h3>created: <%= animals[x].createdAt %></h3><br>
+            <a href='./edit/<%= animals[x].id %>'>Edit <%= animals[x].name %> Details</a><br>
+        <% } %>
+        
+
+        <a href='/'>Back to collections</a>
+
+        <% if(typeof(errors) != 'undefined' ) { %>
+            <% for (var x in errors) { %>
+                <h3><%= errors[x].message %></h3>
+            <% } %>
+        <% } %>
+        
+
+        app.post('/mongooses/edit/:id', function(req, res) {
+    console.log('*****is this working?', req.params.id);
+    console.log(req.body);
+  Animal.update({_id:(req.params.id)},{$set: {name:req.body.name, color:req.body.color, description:req.body.description}}, {upsert: true}, function(err, errors, animals){
+         if(err){
+             console.log('....edit not saved....')
+            res.render('selfies', {title:'fix this before moving on', errors:errors});
+        } else {
+            console.log('update saved')
+            res.render('selfies', {animals:animals});   
+        }
+    })
+})
+<%='/mongooses/edit/'+ animals.id %>

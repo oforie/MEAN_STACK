@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+ <html> 
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Welcome to our Mongoose collection!</title>
+        
+    </head>
+    <body>
+        <h3>Checkout these creatures!</h3>
+         <p><a href='./mongooses/new'>Add to our collection!</a></p>
+
+         <% if(typeof(errors) != 'undefined' ) { %>
+            <% for (var x in errors) { %>
+                <h3><%= errors[x].message %></h3>
+            <% } %>
+        <% } %>
+
+         <div class='animals'>
+             <% for (let x=0; x<animals.length; x++) { %>
+            Name: <a href='./mongooses/<%= animals[x].id %>'><%= animals[x].name %></a><br>
+            created :<%= animals[x].createdAt %><br>
+            <hr>
+        <% } %>
+         </div>
+        
+    </body>
+   
+
+    
+</html>

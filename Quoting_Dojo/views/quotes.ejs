@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+ <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Quotes</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+       <h1> For your viewing pleasure!</h1>
+       <% for (let x=0; x<posts.length; x++) { %>
+            <p>"<%= posts[x].quote %>"</p>
+            posted by:<%= posts[x].name %><br>
+            created:<%= posts[x].createdAt %><br>
+            <hr>
+        <% } %>
+
+    </body>
+</html>

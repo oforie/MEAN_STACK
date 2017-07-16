@@ -1,0 +1,5 @@
+<% if(typeof(errors) == 'undefined' ) { %>
+            <% for (var x in errors) { %>
+                <h4 style='color:red';><%= error.message %></h4>
+            <% } %>
+        <% } %>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Quoting Dojo</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>Welcome to Quoting Dojo</h1>
+        
+        <% if(typeof(errors) != 'undefined' ) { %>
+            <% for (var x in errors) { %>
+                <h3><%= errors[x].message %></h3>
+            <% } %>
+        <% } %>
+
+
+
+        <form class='form' action='/quotes' method='POST'>
+            <label>
+            Your name:<input type='text' name='name'>
+            </label>
+            <label>
+            Your quote:<textarea rows="4" cols="30" name='quote'></textarea>
+            </label>
+            <input type='submit' value='Add my quote!'><br>
+        </form>
+
+        <a href='./quotes'>Skip to quotes!</a>
+        
+        
+       
+        
+    </body>
+</html>

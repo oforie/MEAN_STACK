@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+ <html> 
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Login Registration</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div class='register'>
+            <h1>Register Here!</h1>
+            <form action='/registration' method='post'>
+                <label>
+                First name:<input type='text' name='first_name' value=''>
+                </label>
+                <label>
+                Last name:<input type='text' name='last_name'value=''>
+                </label>
+                <label>
+                Email:<input type='text' name='email'value=''>
+                </label>
+                <label>
+                Password:<input type='password' name='password' value=''>
+                </label>
+                <label>
+                Confirm pw:<input type='password' name='pw_confirm' value=''>
+                </label>
+                <input type='submit' value='Register'>
+            </form>
+        </div>
+
+        
+
+        <div class='login'>
+            <h1>Login</h1>
+            <form action='/login' method='post'>
+                <label>
+                Email:<input type='text' name='email' value=''>
+                </label>
+                <label>
+                Password:<input type='password' name='password'value=''>
+                </label>
+                <input type='submit' value='Login'>
+            </form>
+        </div>
+       
+        
+    </body>
+</html>

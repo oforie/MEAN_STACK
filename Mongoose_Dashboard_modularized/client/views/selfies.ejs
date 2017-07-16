@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+ <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Individual Animals</title>
+    
+    </head>
+    <body>
+        <% for (let x=0; x < animals.length; x++) { %>
+           <h3> Name: <%= animals[x].name %></a></h3><br>
+           <h3> Color: <%= animals[x].color %></h3><br>
+            <h3>Description: <%= animals[x].description %></h3><br>
+            <h3>created: <%= animals[x].createdAt %></h3><br>
+            <a href='./edit/<%= animals[x].id %>'>Edit <%= animals[x].name %> Details</a><br>
+        <% } %>
+        
+
+        <a href='/'>Back to collections</a>
+
+        <% if(typeof(errors) != 'undefined' ) { %>
+            <% for (var x in errors) { %>
+                <h3><%= errors[x].message %></h3>
+            <% } %>
+        <% } %>
+        
+        
+    </body>
+</html>

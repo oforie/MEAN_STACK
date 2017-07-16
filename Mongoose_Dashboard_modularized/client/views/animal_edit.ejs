@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Add a mongoose</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h2> Modify <%= animals.name %>!</h2>
+        
+        <% if(typeof(errors) != 'undefined' ) { %>
+            <% for (var x in errors) { %>
+                <h3><%= errors.message %></h3>
+            <% } %>
+        <% } %>
+        <form action=<%='/mongooses/edit/'+ animals.id %> method='post'>
+            <label>
+            Name:<input type='text' name='name' value=<%= animals.name %>>
+            </label>
+            <label>
+            Color:<input type='text' name='color' value=<%= animals.color %> >
+            </label>
+            <label>
+            Description:<textarea rows="4" cols="40" name='description'><%= animals.description %></textarea>
+            </label><br>
+            <input type='submit' value='Save changes'>
+        </form>
+        
+        
+    </body>
+</html>
