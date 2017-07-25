@@ -1,0 +1,15 @@
+<h1>New Question</h1>
+
+<p *ngIf='error_message'> {{ error_message }}</p>
+
+<div class='new_question'>
+  <form (submit)='new_question()' #formData='ngForm'>
+    Question: <textarea name='user_question' required minlength='15' cols='50' rows='5' [(ngModel)]='question.question' #user_question='ngModel'></textarea><br>
+    Correct Answer: <input type='text' required name='correct_answer' value='' [(ngModel)]='correct.content' #correct_answer='ngModel'><br>
+    Fake Answer 1: <input type='text' required name='fake1' value='' [(ngModel)]='fakeOne.content' #fake1='ngModel'><br>
+    Fake Answer 2: <input type='text' required  name='fake2'  [(ngModel)]='fakeTwo.content' value='' #fake2='ngModel'><br>
+    <input type='submit' [disabled]='!formData.valid' value='Add Question' >
+  </form>
+  <button class='button' [routerLink]="['']">Cancel</button>
+  
+</div>

@@ -1,0 +1,15 @@
+
+<div class='questions' >
+<form #testForm='ngForm' (submit)='submitTest()'>
+  <div *ngFor='let question of tests; let i=index;'>
+    <p>{{i+1}} . {{question.question}}</p>
+    
+    <p *ngFor='let answer of question.answers'><input name="i+1" required type='radio'>{{answer.content}}</p>
+
+   
+  </div>
+
+<input type="submit" [disabled]="!testForm.valid" value="Submit">
+</form>
+<button [routerLink]="['']">Cancel</button>
+</div>
