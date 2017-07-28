@@ -1,0 +1,15 @@
+
+<div style="text-align:center">
+<div class='addquote'>
+<h1>Add a Quote!</h1>
+<form (submit)='newQuote()' #formData='ngForm'>
+<textarea name='content'rows="4" cols="50" placeholder='<< enter quote here >>' value='' required minlength='4' [(ngModel)]='quote.content' #content='ngModel'>
+</textarea><br>
+Author: <input type='text' name='author' value='' required [(ngModel)]='quote.author'><br>
+<input type='submit' value='Post Quote!' [disabled]='!formData.form.valid' >
+</form>
+</div>
+
+
+<app-quote-list [quotes]='quotes' (decrease)='downVote($event)' (increase)='upVote($event)'></app-quote-list>
+</div>

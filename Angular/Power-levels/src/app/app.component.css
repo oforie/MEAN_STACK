@@ -1,0 +1,23 @@
+.wrapper {
+    background-color: skyblue;
+    border: 1px solid black;
+}
+
+.select_power {
+    background-color: white;
+    border: 1px dotted black;
+    width: 600px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    padding: 10px;
+
+}
+
+.team {
+    display: inline-block;
+    width: 400px;
+    height: 150px;
+    background-color:#f5f5dc;
+    border: 1px solid black;
+    margin: 5px;
+}

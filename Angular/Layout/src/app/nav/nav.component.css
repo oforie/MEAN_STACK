@@ -1,0 +1,20 @@
+.nav {
+    display: inline-block;
+    background-color: skyblue;
+    width: 350px;
+    vertical-align: top;
+    margin-top: -230px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 1px solid black;
+
+}
+
+a {
+    text-decoration: none;
+    display: block;
+    border: 1px solid black;
+    margin: 5px;
+    text-align: center;
+    background-color: white;
+}

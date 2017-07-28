@@ -1,0 +1,10 @@
+<h1>Create your poll here!</h1>
+
+<form #formData='ngForm' (submit)='createpoll()'>
+  Question: <textarea name='question' required value='' rows='3' col='80' [(ngModel)]='poll.question' #question='ngModel'></textarea><br>
+  Option 1: <input type='text' name='optionone' required value='' [(ngModel)]='poll.optionone' #optionone='ngModel'><br>
+  Option 2: <input type='text' name='optiontwo' required value='' [(ngModel)]='poll.optiontwo' #optiontwo='ngModel'><br>
+  Option 3: <input type='text' name='optionthree' required value='' [(ngModel)]='poll.optionthree' #optionthree='ngModel'><br>
+  Option 4: <input type='text' name='optionfour' required value='' [(ngModel)]='poll.optionfour' #optionfour='ngModel'><br>
+  <input type='submit' value="Create Poll" [disabled]='!formData.valid'>
+</form>

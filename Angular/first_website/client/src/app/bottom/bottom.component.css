@@ -1,0 +1,8 @@
+.bottom {
+    border: 1px solid black;
+    width: 215px;
+    height: 200px;
+    display: inline-block;
+    margin: 10px;
+    background-color: grey;
+}

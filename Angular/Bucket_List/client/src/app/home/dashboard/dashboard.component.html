@@ -1,0 +1,20 @@
+
+<h1 *ngIf='current_user'> Welcome, {{current_user.name}}!</h1>
+
+<form #formData='ngForm' (submit)='addTask()'>
+  <input [(ngModel)]='task.title' type='text' name='task_title' value='' placeholder="Title" #task_title='ngModel'>
+   <input [(ngModel)]='task.description' type='text' name='task_description' value='' placeholder="Description" #task_title='ngModel'>
+   <select [(ngModel)]='task.taggeduser' name='taggeduser'>
+      <option *ngFor='let user of user_list'  value={{user._id}} >{{user.name}}</option>
+  </select>
+   <input type='submit' value='Submit'>
+</form>
+  
+<h3> List of other users (click to view profile)</h3><hr>
+<div *ngFor='let user of user_list'>
+  <ul>
+  <li><a href ='/home/showone/{{user._id}}'>{{user.name}}</a></li>
+  </ul>
+</div>
+
+

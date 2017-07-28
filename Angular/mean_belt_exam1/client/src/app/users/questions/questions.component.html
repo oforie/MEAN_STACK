@@ -1,0 +1,15 @@
+<h1>New Question</h1>
+
+
+
+<div class='new_question'>
+  <form (submit)='addQuestion()' #formData='ngForm'>
+    Question: <textarea name='question' required minlength='15' cols='50' rows='5' [(ngModel)]='new_question.question'></textarea><br>
+    Correct Answer: <input type='text' required name='correct' value='' [(ngModel)]='new_question.correct' #correct='ngModel'><br>
+    Fake Answer 1: <input type='text' required name='fake1' value='' [(ngModel)]='new_question.fakeOne' #fakeOne='ngModel'><br>
+    Fake Answer 2: <input type='text' required  name='fake2'  [(ngModel)]='new_question.fakeTwo' value='' #fakeTwo='ngModel'><br>
+    <input type='submit' [disabled]='!formData.valid' value='Add Question' (click)='addQuestion($event)'>
+  </form>
+  <button class='button' (click)='onClick()'>Cancel</button>
+  
+</div>

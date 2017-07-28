@@ -29,9 +29,18 @@
                 <input type='submit' value='Register'>
             </form>
         </div>
+         <% if (typeof(error) != 'undefined') { %>
+      <p><%= error %></p>
+    <% } else if (typeof(errors) != 'undefined') { %>
+      <% for (let x in errors.errors) { %>
+        <p><%= errors.errors[x] %></p>
+      <% } %>
+    <% } %>
 
         
-
+<% if (typeof(error) != 'undefined') { %>
+      <p class="rederror"><%= error %></p>
+    <% } %>
         <div class='login'>
             <h1>Login</h1>
             <form action='/login' method='post'>

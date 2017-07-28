@@ -1,0 +1,6 @@
+div.container {
+    max-width: 960px;
+    margin: auto;
+    border: 1px dotted grey;
+    padding: 10px;
+}

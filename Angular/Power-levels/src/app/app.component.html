@@ -1,0 +1,28 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class='wrapper' style="text-align:center">
+  <h2>PowerComponent</h2>
+
+    <div class='select_power'>
+      <h3> Initial Power Level</h3>
+      <form (submit)='onSubmit()'>
+        <input type='number' name='user_input' min='0' max='100' value='' required [(ngModel)]='power_val' #user_input='ngModel'>
+        <button type='submit'>Calculate Power!</button>
+      </form>
+    </div>
+
+    <div class='group'>
+      <app-chelsea [mypower]='power_val' class='team'></app-chelsea>
+      <app-city [mypower]='power_val' class='team'></app-city>
+      <app-galaxy [mypower]='power_val' class='team'></app-galaxy>
+      <app-liverpool [mypower]='power_val' class='team'></app-liverpool>
+      <app-sounders [mypower]='power_val' class='team'></app-sounders>
+      <app-united [mypower]='power_val' class='team'></app-united>
+
+    </div>
+
+
+
+
+
+</div>
+

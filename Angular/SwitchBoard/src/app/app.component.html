@@ -1,0 +1,13 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+ 
+ <h1> SwitchBoard</h1>
+
+ <h3>Click a switch</h3>
+
+<div class='switches' *ngFor="let element of switch, let idx = index">
+  <button class='button' *ngIf="element" [ngClass]="{'on':element}" (click)='changeSwitch(idx)'>ON</button>
+  <button class='button' *ngif='!switch' (click)='changeSwitch(idx)' [ngClass]="{'on':element}">OFF</button>
+
+</div>
+

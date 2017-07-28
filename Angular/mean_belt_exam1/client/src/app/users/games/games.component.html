@@ -1,0 +1,16 @@
+<div *ngIf='question_status'>
+  <p> Thank you for adding to our list of questions!.</p>
+</div>
+
+<div class='round'>
+    <div class='player_name' *ngIf='status'>
+    <form (submit)='onSubmit()' #formData='ngForm'>
+      <input type='text' name='name' placeholder="Enter your name to play!" required minlength='2' [(ngModel)]='new_player.name' value=''>
+      <input type='submit' value='Enter' [disabled]='!formData.valid'>
+    </form>
+    </div>
+
+    <button class='button' (click)='onClick()'>Play!</button>
+    <p>Click the above to start the trivia game<p>
+</div>
+
